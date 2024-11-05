@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Diabetes Diagnosis Tool</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Diagnosis Tool</h1>
+        <form id="diagnosis-form" onsubmit="event.preventDefault(); diagnose();">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="appetite">Increased Appetite (h: high, n: normal):</label>
+            <input type="text" id="appetite" required>
+
+            <label for="thirst">Increased Thirst (h: high, n: normal):</label>
+            <input type="text" id="thirst" required>
+
+            <label for="urination">Increased Urination (h: high, n: normal):</label>
+            <input type="text" id="urination" required>
+
+            <label for="vision">Blurred Vision (h: yes, n: no):</label>
+            <input type="text" id="vision" required>
+
+            <label for="urineSugar">Urine Sugar (a: abnormal, n: normal):</label>
+            <input type="text" id="urineSugar" required>
+
+            <label for="fastingSugar">Fasting Sugar (h: high, n: normal):</label>
+            <input type="text" id="fastingSugar" required>
+
+            <label for="familyHistory">Family History of Diabetes (h: yes, n: no):</label>
+            <input type="text" id="familyHistory" required>
+
+            <div class="button-group">
+                <button type="submit">Diagnose</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+        <div id="result" class="result"></div>
+        <div id="tips" class="tips"></div>
+        <div id="history" class="history"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
